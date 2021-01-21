@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+h2
+{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding: 15px;
+
+}
+
+header
+{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-column: 1/-1;
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    height: 100px;
+}
+
+header nav a
+{
+    font-family: "Founders Grotesk Cond Med",sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 32px 12px;
+    color: rgb(0, 0, 0);
+  
+}
+.header-contetnt
+{
+    grid-column: 2/3;
+}
+.header-left
+{
+    grid-column: 1/2;
+}
+.header-right
+{
+    grid-column: 2/3;
+}
+main
+{
+    display: grid;
+    grid-column: 1/-1;
+
+    grid-template-columns: 1fr 5fr 1fr;
+}
+.image-container
+{
+    
+    grid-column: 1/-1;
+    background-color: white;
+}
+
+.myMainImage
+{
+    width: 100%;
+}
+.leftMain
+{
+
+    grid-column: 1/2;
+    background-color: white;
+}
+
+.mainContetnt
+{
+    grid-column: 2/3;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-bottom: 37px;
+    margin-top: 37px;
+}
+.mainContetnt p{
+    grid-column: 1/-1;
+    background-color: white;
+
+    text-align: center;
+}
+.contetntmainleft
+{
+    grid-column: 1/2;
+    background-color: white;
+    margin: auto;
+}
+.contetntmainright
+{
+    grid-column: 2/-1;
+    background-color: white;
+    margin: auto;
+}
+.rightMain
+{
+    grid-column: 3/-1;
+    background-color: white;
+}
+
+
+.logo
+{
+    position: absolute;
+    width: 120px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header nav
+{
+    position: absolute;
+    right: 14%;
+    top: 50%;
+    transform: translateY(-50%);
+    float: right;
+}
+
+header nav a 
+{
+    padding: 10px 10px;
+}
+
+footer
+{
+    grid-column: 1/-1;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+      padding: 15px;
+      color: #ffffff;
+      background-color: #303030;
+      bottom: 0;
+}
