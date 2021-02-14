@@ -4,8 +4,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Arial Narrow Bold', sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body
 {
     display: grid;
@@ -389,11 +391,11 @@ main
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    background-image: url(../assets/about-us.jpg);
-    background-repeat: no-repeat, repeat;
-    align-items: center;
+    background-image: url(../assets/aboutus-background.jpg);
     background-attachment: fixed;
-    background-size: cover;
+    /* background-position: center center;  */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     height: 200px;
 }
 
@@ -411,9 +413,10 @@ main
 }   
 @media screen and (max-width: 900px) {
     .about-us{
-        background-image: url(../assets/about-us.jpg);
-        background-repeat: no-repeat, repeat;
+        background-image: url(../assets/aboutus-background.jpg);
         background-attachment: fixed;
+        background-position: center center;
+        background-repeat: no-repeat;
         background-size: cover;
         height: 60vh;
     }

@@ -1,17 +1,3 @@
-// function Scroll(){
-//     var introText=document.getElementsByClassName("affected");
-//     var  screenPos=window.innerHeight/1.35;
-//     for(var x=0;x<introText.length;x++){
-//         var introPosition=introText[x].getBoundingClientRect().top;
-//         if(introPosition<screenPos){
-//             introText[x].classList.add("appear");
-//         }
-//     }
-// }
-// window.addEventListener("scroll",Scroll)
-// Scroll();
-
-
 // // Responsive Navigation Menu
 
 // var navSlide = () => {
