@@ -393,9 +393,9 @@ main
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     background-image: url(../assets/aboutus-background.jpg);
     background-attachment: fixed;
-    /* background-position: center center;  */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
+    background-position: center center; 
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 200px;
 }
 
