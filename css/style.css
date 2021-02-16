@@ -4,6 +4,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
 }
 html {
     scroll-behavior: smooth;
@@ -51,77 +53,89 @@ nav {
     margin-right: auto;
     align-items: center;
     min-height: 8vh;
-    
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0; /* required */
 }
 
-.nav-links {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-}
-
-.nav-links a {
+  nav ul{
+    float: right;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+  }
+  nav ul li a{
+    color: rgb(0, 0, 0);
+    padding: 7px 13px;
+    border-radius: 3px;
     text-decoration: none;
-    color: #000000;
     letter-spacing: 1px;
     font-size: 17px;
-}
-
-.burger {
-    display: none;
+  }
+  a.active,a:hover{
+    background: #253443;
+    color: #ffffff;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
     cursor: pointer;
-}
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 900px){
+    .checkbtn{
+      display: block;
+    }
+    nav ul li a{
+        color: rgb(255, 255, 255);
+      }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      z-index: 6;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .fa-bars {
+      color: #000000;
+  }
 
-.burger div {
-    width: 25px;
-    height: 2px;
-    background-color: black;
-    display: block;
-    margin: 5px;
-}
+  
 
 @media screen and (max-width: 900px){
-    header {
-        overflow-x: hidden;
-    }
-    .nav-links {
-        position: absolute;
-        right: 0;
-        height: 93vh;
-        top: 8vh;
-        background-color: #645c5c;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        z-index: 2;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-    .nav-links li {
-        opacity: 0;
-    }
-    .burger {
-        display: block;
-    }
-}
 
-.nav-active {
-    transform: translateX(0%);
 }
-
-@keyframes navLinksFade
-{from {
-    opacity: 0;
-    transform: translateX(50px)
-}
-to {
-    opacity: 1;
-    transform: translateX(0px)
-}}
 
 li ul
 {
@@ -145,7 +159,6 @@ li ul
     border-top: 5px solid #253443;
     width: 250px;
     position: absolute;
-    top: 2rem;
 }
 .dropdown-li:hover:before {    position: absolute;
     background: 0 0;
@@ -154,19 +167,13 @@ li ul
     content: "";
    
 }
-.padding-drop {
-    padding-bottom: 20px;
-}
 ul li
 {
     display: block;
     position: relative;
     float: left;
 }
-.dropdown-item:hover 
-{
-    background: #00bbff;
-}
+
 li:hover ul 
 {
     display: block;
@@ -182,8 +189,8 @@ li:hover li
 
 li:hover li a:hover 
 {
-    background: #5e6163;
-    color: #ffffff;
+    color: #000000;
+    background-color: transparent;
 }
 
 
@@ -208,7 +215,7 @@ li:hover li a:hover
     align-items: center;
     top: 50%;
     height: auto;
-    padding: 5px 0;
+    padding: 10px 0;
     color: #ffffff;
 }
 
@@ -273,6 +280,7 @@ main
         background-repeat: no-repeat;
         background-size: cover;
         height: 400px;
+        position: relative;
     }
 }
 .hero-text{
@@ -335,6 +343,7 @@ main
         height: 65px;
     }
 }
+
 .background-overlay
 {
     background-color: #253443;
@@ -344,6 +353,7 @@ main
     width: 100%;
     position: absolute;
 }
+
 .services{
     grid-column: -1/1;
     padding: 20px 0 40px 0;
