@@ -399,7 +399,7 @@ main
 .about-us{
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: 1fr 1fr;
     background-image: url(../assets/aboutus-background.jpg);
     background-attachment: fixed;
     background-position: center center; 
@@ -408,7 +408,9 @@ main
     height: 200px;
 }
 
-
+.aboutus-text{
+    grid-column: 1/2;
+}
 .aboutus-text p{
     position: relative;
     text-align: center;
@@ -417,12 +419,14 @@ main
     padding: 0px 25px;
 }
 .aboutus-image {
+    grid-column: 2/3;
     text-align: center;
     margin: auto 0px;
 }   
 @media screen and (max-width: 900px) {
     .about-us{
         background-image: url(../assets/aboutus-background.jpg);
+        grid-template-columns: 1fr 1fr;
         background-attachment: fixed;
         background-position: center center;
         background-repeat: no-repeat;
@@ -430,6 +434,7 @@ main
         height: 60vh;
     }
     .aboutus-text {
+        grid-column: 1/-1;
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -442,6 +447,7 @@ main
         padding: 0px 25px;
     }
     .aboutus-image {
+        grid-column: 1/-1;
         position: relative;
         text-align: center;
         /* top: 50%; */
